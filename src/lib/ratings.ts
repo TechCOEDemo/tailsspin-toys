@@ -30,3 +30,10 @@ export function formatStarRating(rating: number | null): string {
 
     return '★'.repeat(fullStars) + (halfStar ? '½' : '') + '☆'.repeat(emptyStars);
 }
+
+/**
+ * Formats a rating for compact card display.
+ */
+export function formatCardRating(rating: number | null): string {
+    return rating === null ? 'No rating yet' : `${rating}/5`;
+}
